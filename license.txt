@@ -1,9 +1,9 @@
 *Code: unlicense
 
-*The rest:
+*Models: unlicense
 
-Minetest Game mod: default
-==========================
+*Textures from Minetest Game mod: default
+=========================================
 
 License of source code:
 -----------------------
