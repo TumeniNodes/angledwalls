@@ -9,7 +9,8 @@ function angledwalls.register_angled_wall(subname, recipeitem, groups, images, d
 	groups.angledwall = 1
 minetest.register_node(":angledwalls:angled_wall" .. subname, {
 	description = description,
-	drawtype = "nodebox",
+	drawtype = "mesh",
+	mesh = "angled_wall.obj",
 	tiles = images,
 	paramtype = "light",
 	sunlight_propogates = true,
@@ -17,7 +18,7 @@ minetest.register_node(":angledwalls:angled_wall" .. subname, {
 	is_ground_content = false,
 	groups = groups,
 	sounds = sounds,
-	node_box = {
+	collision_box = {
 		type = "fixed",
 		fixed = {
 			{0, -0.5, 0, 0.5, 0.5, 0.5},
@@ -41,7 +42,8 @@ function angledwalls.register_low_angled_wall(subname, recipeitem, groups, image
 	groups.lowangledwall = 1
 minetest.register_node(":angledwalls:low_angled_wall" .. subname, {
 	description = description,
-	drawtype = "nodebox",
+	drawtype = "mesh",
+	mesh = "low_angled_wall.obj",
 	tiles = images,
 	paramtype = "light",
 	sunlight_propogates = true,
@@ -49,7 +51,7 @@ minetest.register_node(":angledwalls:low_angled_wall" .. subname, {
 	is_ground_content = false,
 	groups = groups,
 	sounds = sounds,
-	node_box = {
+	collision_box = {
 		type = "fixed",
 		fixed = {
 			{0, -0.5, 0, 0.5, 0, 0.5},
@@ -219,7 +221,8 @@ angledwalls.register_angled_wall_and_low_angled_wall("goldblock", "default:goldb
 
 minetest.register_node("angledwalls:acaciaglass", {
 	description = "angledwalls acacia glass",
-	drawtype = "nodebox",
+	drawtype = "mesh",
+	mesh = "angledwalls_glass.obj",
 	tiles = {"acaciaglass.png"},
 	use_texture_alpha = true,
 	paramtype = "light",
@@ -227,8 +230,8 @@ minetest.register_node("angledwalls:acaciaglass", {
 	legacy_facedir_simple = true,
 	groups = {cracky=3, stone=2},
 	is_ground_content = false,
-	sounds = default.node_sound_stone_defaults(),
-	node_box = {
+	sounds = default.node_sound_glass_defaults(),
+	collision_box = {
 		type = "fixed",
 		fixed = {
 			{0.375, -0.5, 0.375, 0.5, 0.5, 0.5},
@@ -252,7 +255,8 @@ minetest.register_node("angledwalls:acaciaglass", {
 
 minetest.register_node("angledwalls:acaciaobsidianglass", {
 	description = "angledwalls acacia obsidian glass",
-	drawtype = "nodebox",
+	drawtype = "mesh",
+	mesh = "angledwalls_glass.obj",
 	tiles = {"acaciaobsidianglass.png"},
 	use_texture_alpha = true,
 	paramtype = "light",
@@ -260,8 +264,8 @@ minetest.register_node("angledwalls:acaciaobsidianglass", {
 	legacy_facedir_simple = true,
 	groups = {cracky=3, stone=2},
 	is_ground_content = false,
-	sounds = default.node_sound_stone_defaults(),
-	node_box = {
+	sounds = default.node_sound_glass_defaults(),
+	collision_box = {
 		type = "fixed",
 		fixed = {
 			{0.375, -0.5, 0.375, 0.5, 0.5, 0.5},
@@ -285,7 +289,8 @@ minetest.register_node("angledwalls:acaciaobsidianglass", {
 
 minetest.register_node("angledwalls:aspenglass", {
 	description = "angledwalls aspen glass",
-	drawtype = "nodebox",
+	drawtype = "mesh",
+	mesh = "angledwalls_glass.obj",
 	tiles = {"aspenglass.png"},
 	use_texture_alpha = true,
 	paramtype = "light",
@@ -293,8 +298,8 @@ minetest.register_node("angledwalls:aspenglass", {
 	legacy_facedir_simple = true,
 	groups = {cracky=3, stone=2},
 	is_ground_content = false,
-	sounds = default.node_sound_stone_defaults(),
-	node_box = {
+	sounds = default.node_sound_glass_defaults(),
+	collision_box = {
 		type = "fixed",
 		fixed = {
 			{0.375, -0.5, 0.375, 0.5, 0.5, 0.5},
@@ -318,7 +323,8 @@ minetest.register_node("angledwalls:aspenglass", {
 
 minetest.register_node("angledwalls:aspenobsidianglass", {
 	description = "angledwalls aspen obsidian glass",
-	drawtype = "nodebox",
+	drawtype = "mesh",
+	mesh = "angledwalls_glass.obj",
 	tiles = {"aspenobsidianglass.png"},
 	use_texture_alpha = true,
 	paramtype = "light",
@@ -326,8 +332,8 @@ minetest.register_node("angledwalls:aspenobsidianglass", {
 	legacy_facedir_simple = true,
 	groups = {cracky=3, stone=2},
 	is_ground_content = false,
-	sounds = default.node_sound_stone_defaults(),
-	node_box = {
+	sounds = default.node_sound_glass_defaults(),
+	collision_box = {
 		type = "fixed",
 		fixed = {
 			{0.375, -0.5, 0.375, 0.5, 0.5, 0.5},
@@ -351,7 +357,8 @@ minetest.register_node("angledwalls:aspenobsidianglass", {
 
 minetest.register_node("angledwalls:brickglass", {
 	description = "angledwalls brick glass",
-	drawtype = "nodebox",
+	drawtype = "mesh",
+	mesh = "angledwalls_glass.obj",
 	tiles = {"brickglass.png"},
 	use_texture_alpha = true,
 	paramtype = "light",
@@ -359,8 +366,8 @@ minetest.register_node("angledwalls:brickglass", {
 	legacy_facedir_simple = true,
 	groups = {cracky=3, stone=2},
 	is_ground_content = false,
-	sounds = default.node_sound_stone_defaults(),
-	node_box = {
+	sounds = default.node_sound_glass_defaults(),
+	collision_box = {
 		type = "fixed",
 		fixed = {
 			{0.375, -0.5, 0.375, 0.5, 0.5, 0.5},
@@ -384,7 +391,8 @@ minetest.register_node("angledwalls:brickglass", {
 
 minetest.register_node("angledwalls:brickobsidianglass", {
 	description = "angledwalls brick obsidian glass",
-	drawtype = "nodebox",
+	drawtype = "mesh",
+	mesh = "angledwalls_glass.obj",
 	tiles = {"brickobsidianglass.png"},
 	use_texture_alpha = true,
 	paramtype = "light",
@@ -392,8 +400,8 @@ minetest.register_node("angledwalls:brickobsidianglass", {
 	legacy_facedir_simple = true,
 	groups = {cracky=3, stone=2},
 	is_ground_content = false,
-	sounds = default.node_sound_stone_defaults(),
-	node_box = {
+	sounds = default.node_sound_glass_defaults(),
+	collision_box = {
 		type = "fixed",
 		fixed = {
 			{0.375, -0.5, 0.375, 0.5, 0.5, 0.5},
@@ -417,7 +425,8 @@ minetest.register_node("angledwalls:brickobsidianglass", {
 
 minetest.register_node("angledwalls:cobbleglass", {
 	description = "angledwalls cobble glass",
-	drawtype = "nodebox",
+	drawtype = "mesh",
+	mesh = "angledwalls_glass.obj",
 	tiles = {"cobbleglass.png"},
 	use_texture_alpha = true,
 	paramtype = "light",
@@ -425,8 +434,8 @@ minetest.register_node("angledwalls:cobbleglass", {
 	legacy_facedir_simple = true,
 	groups = {cracky=3, stone=2},
 	is_ground_content = false,
-	sounds = default.node_sound_stone_defaults(),
-	node_box = {
+	sounds = default.node_sound_glass_defaults(),
+	colliosion_box = {
 		type = "fixed",
 		fixed = {
 			{0.375, -0.5, 0.375, 0.5, 0.5, 0.5},
@@ -450,7 +459,8 @@ minetest.register_node("angledwalls:cobbleglass", {
 
 minetest.register_node("angledwalls:cobbleobsidianglass", {
 	description = "angledwalls cobble obsidian glass",
-	drawtype = "nodebox",
+	drawtype = "mesh",
+	mesh = "angledwalls_glass.obj",
 	tiles = {"cobbleobsidianglass.png"},
 	use_texture_alpha = true,
 	paramtype = "light",
@@ -458,8 +468,8 @@ minetest.register_node("angledwalls:cobbleobsidianglass", {
 	legacy_facedir_simple = true,
 	groups = {cracky=3, stone=2},
 	is_ground_content = false,
-	sounds = default.node_sound_stone_defaults(),
-	node_box = {
+	sounds = default.node_sound_glass_defaults(),
+	collision_box = {
 		type = "fixed",
 		fixed = {
 			{0.375, -0.5, 0.375, 0.5, 0.5, 0.5},
@@ -483,7 +493,8 @@ minetest.register_node("angledwalls:cobbleobsidianglass", {
 
 minetest.register_node("angledwalls:desertcobbleglass", {
 	description = "angledwalls desert cobble glass",
-	drawtype = "nodebox",
+	drawtype = "mesh",
+	mesh = "angledwalls_glass.obj",
 	tiles = {"desertcobbleglass.png"},
 	use_texture_alpha = true,
 	paramtype = "light",
@@ -491,8 +502,8 @@ minetest.register_node("angledwalls:desertcobbleglass", {
 	legacy_facedir_simple = true,
 	groups = {cracky=3, stone=2},
 	is_ground_content = false,
-	sounds = default.node_sound_stone_defaults(),
-	node_box = {
+	sounds = default.node_sound_glass_defaults(),
+	collision_box = {
 		type = "fixed",
 		fixed = {
 			{0.375, -0.5, 0.375, 0.5, 0.5, 0.5},
@@ -516,7 +527,8 @@ minetest.register_node("angledwalls:desertcobbleglass", {
 
 minetest.register_node("angledwalls:desertcobbleobsidianglass", {
 	description = "angledwalls desert cobble obsidian glass",
-	drawtype = "nodebox",
+	drawtype = "mesh",
+	mesh = "angledwalls_glass.obj",
 	tiles = {"desertcobbleobsidianglass.png"},
 	use_texture_alpha = true,
 	paramtype = "light",
@@ -524,8 +536,8 @@ minetest.register_node("angledwalls:desertcobbleobsidianglass", {
 	legacy_facedir_simple = true,
 	groups = {cracky=3, stone=2},
 	is_ground_content = false,
-	sounds = default.node_sound_stone_defaults(),
-	node_box = {
+	sounds = default.node_sound_glass_defaults(),
+	collision_box = {
 		type = "fixed",
 		fixed = {
 			{0.375, -0.5, 0.375, 0.5, 0.5, 0.5},
@@ -549,7 +561,8 @@ minetest.register_node("angledwalls:desertcobbleobsidianglass", {
 
 minetest.register_node("angledwalls:desertstonebrickglass", {
 	description = "angledwalls desert stone brick glass",
-	drawtype = "nodebox",
+	drawtype = "mesh",
+	mesh = "angledwalls_glass.obj",
 	tiles = {"desertstonebrickglass.png"},
 	use_texture_alpha = true,
 	paramtype = "light",
@@ -557,8 +570,8 @@ minetest.register_node("angledwalls:desertstonebrickglass", {
 	legacy_facedir_simple = true,
 	groups = {cracky=3, stone=2},
 	is_ground_content = false,
-	sounds = default.node_sound_stone_defaults(),
-	node_box = {
+	sounds = default.node_sound_glass_defaults(),
+	collision_box = {
 		type = "fixed",
 		fixed = {
 			{0.375, -0.5, 0.375, 0.5, 0.5, 0.5},
@@ -582,7 +595,8 @@ minetest.register_node("angledwalls:desertstonebrickglass", {
 
 minetest.register_node("angledwalls:desertstonebrickobsidianglass", {
 	description = "angledwalls desert stone brick obsidian glass",
-	drawtype = "nodebox",
+	drawtype = "mesh",
+	mesh = "angledwalls_glass.obj",
 	tiles = {"desertstonebrickobsidianglass.png"},
 	use_texture_alpha = true,
 	paramtype = "light",
@@ -590,8 +604,8 @@ minetest.register_node("angledwalls:desertstonebrickobsidianglass", {
 	legacy_facedir_simple = true,
 	groups = {cracky=3, stone=2},
 	is_ground_content = false,
-	sounds = default.node_sound_stone_defaults(),
-	node_box = {
+	sounds = default.node_sound_glass_defaults(),
+	collision_box = {
 		type = "fixed",
 		fixed = {
 			{0.375, -0.5, 0.375, 0.5, 0.5, 0.5},
@@ -615,7 +629,8 @@ minetest.register_node("angledwalls:desertstonebrickobsidianglass", {
 
 minetest.register_node("angledwalls:junglewoodglass", {
 	description = "angledwalls junglewood glass",
-	drawtype = "nodebox",
+	drawtype = "mesh",
+	mesh = "angledwalls_glass.obj",
 	tiles = {"junglewoodglass.png"},
 	use_texture_alpha = true,
 	paramtype = "light",
@@ -623,8 +638,8 @@ minetest.register_node("angledwalls:junglewoodglass", {
 	legacy_facedir_simple = true,
 	groups = {cracky=3, stone=2},
 	is_ground_content = false,
-	sounds = default.node_sound_stone_defaults(),
-	node_box = {
+	sounds = default.node_sound_glass_defaults(),
+	collision_box = {
 		type = "fixed",
 		fixed = {
 			{0.375, -0.5, 0.375, 0.5, 0.5, 0.5},
@@ -648,7 +663,8 @@ minetest.register_node("angledwalls:junglewoodglass", {
 
 minetest.register_node("angledwalls:junglewoodobsidianglass", {
 	description = "angledwalls junglewood obsidian glass",
-	drawtype = "nodebox",
+	drawtype = "mesh",
+	mesh = "angledwalls_glass.obj",
 	tiles = {"junglewoodobsidianglass.png"},
 	use_texture_alpha = true,
 	paramtype = "light",
@@ -656,8 +672,8 @@ minetest.register_node("angledwalls:junglewoodobsidianglass", {
 	legacy_facedir_simple = true,
 	groups = {cracky=3, stone=2},
 	is_ground_content = false,
-	sounds = default.node_sound_stone_defaults(),
-	node_box = {
+	sounds = default.node_sound_glass_defaults(),
+	collision_box = {
 		type = "fixed",
 		fixed = {
 			{0.375, -0.5, 0.375, 0.5, 0.5, 0.5},
@@ -681,7 +697,8 @@ minetest.register_node("angledwalls:junglewoodobsidianglass", {
 
 minetest.register_node("angledwalls:pinewoodglass", {
 	description = "angledwalls pine wood glass",
-	drawtype = "nodebox",
+	drawtype = "mesh",
+	mesh = "angledwalls_glass.obj",
 	tiles = {"pinewoodglass.png"},
 	use_texture_alpha = true,
 	paramtype = "light",
@@ -689,8 +706,8 @@ minetest.register_node("angledwalls:pinewoodglass", {
 	legacy_facedir_simple = true,
 	groups = {cracky=3, stone=2},
 	is_ground_content = false,
-	sounds = default.node_sound_stone_defaults(),
-	node_box = {
+	sounds = default.node_sound_glass_defaults(),
+	collision_box = {
 		type = "fixed",
 		fixed = {
 			{0.375, -0.5, 0.375, 0.5, 0.5, 0.5},
@@ -714,7 +731,8 @@ minetest.register_node("angledwalls:pinewoodglass", {
 
 minetest.register_node("angledwalls:pinewoodobsidianglass", {
 	description = "angledwalls pine wood obsidian glass",
-	drawtype = "nodebox",
+	drawtype = "mesh",
+	mesh = "angledwalls_glass.obj",
 	tiles = {"pinewoodobsidianglass.png"},
 	use_texture_alpha = true,
 	paramtype = "light",
@@ -722,8 +740,8 @@ minetest.register_node("angledwalls:pinewoodobsidianglass", {
 	legacy_facedir_simple = true,
 	groups = {cracky=3, stone=2},
 	is_ground_content = false,
-	sounds = default.node_sound_stone_defaults(),
-	node_box = {
+	sounds = default.node_sound_glass_defaults(),
+	collision_box = {
 		type = "fixed",
 		fixed = {
 			{0.375, -0.5, 0.375, 0.5, 0.5, 0.5},
@@ -747,7 +765,8 @@ minetest.register_node("angledwalls:pinewoodobsidianglass", {
 
 minetest.register_node("angledwalls:sandstoneglass", {
 	description = "angledwalls sandstone glass",
-	drawtype = "nodebox",
+	drawtype = "mesh",
+	mesh = "angledwalls_glass.obj",
 	tiles = {"sandstoneglass.png"},
 	use_texture_alpha = true,
 	paramtype = "light",
@@ -755,8 +774,8 @@ minetest.register_node("angledwalls:sandstoneglass", {
 	legacy_facedir_simple = true,
 	groups = {cracky=3, stone=2},
 	is_ground_content = false,
-	sounds = default.node_sound_stone_defaults(),
-	node_box = {
+	sounds = default.node_sound_glass_defaults(),
+	collision_box = {
 		type = "fixed",
 		fixed = {
 			{0.375, -0.5, 0.375, 0.5, 0.5, 0.5},
@@ -780,7 +799,8 @@ minetest.register_node("angledwalls:sandstoneglass", {
 
 minetest.register_node("angledwalls:sandstoneobsidianglass", {
 	description = "angledwalls sandstone obsidian glass",
-	drawtype = "nodebox",
+	drawtype = "mesh",
+	mesh = "angledwalls_glass.obj",
 	tiles = {"sandstoneobsidianglass.png"},
 	use_texture_alpha = true,
 	paramtype = "light",
@@ -788,8 +808,8 @@ minetest.register_node("angledwalls:sandstoneobsidianglass", {
 	legacy_facedir_simple = true,
 	groups = {cracky=3, stone=2},
 	is_ground_content = false,
-	sounds = default.node_sound_stone_defaults(),
-	node_box = {
+	sounds = default.node_sound_glass_defaults(),
+	collision_box = {
 		type = "fixed",
 		fixed = {
 			{0.375, -0.5, 0.375, 0.5, 0.5, 0.5},
@@ -813,7 +833,8 @@ minetest.register_node("angledwalls:sandstoneobsidianglass", {
 
 minetest.register_node("angledwalls:stoneglass", {
 	description = "angledwalls stone glass",
-	drawtype = "nodebox",
+	drawtype = "mesh",
+	mesh = "angledwalls_glass.obj",
 	tiles = {"stoneglass.png"},
 	use_texture_alpha = true,
 	paramtype = "light",
@@ -821,8 +842,8 @@ minetest.register_node("angledwalls:stoneglass", {
 	legacy_facedir_simple = true,
 	groups = {cracky=3, stone=2},
 	is_ground_content = false,
-	sounds = default.node_sound_stone_defaults(),
-	node_box = {
+	sounds = default.node_sound_glass_defaults(),
+	collision_box = {
 		type = "fixed",
 		fixed = {
 			{0.375, -0.5, 0.375, 0.5, 0.5, 0.5},
@@ -846,7 +867,8 @@ minetest.register_node("angledwalls:stoneglass", {
 
 minetest.register_node("angledwalls:stoneobsidianglass", {
 	description = "angledwalls stone obsidian glass",
-	drawtype = "nodebox",
+	drawtype = "mesh",
+	mesh = "angledwalls_glass.obj",
 	tiles = {"stoneobsidianglass.png"},
 	use_texture_alpha = true,
 	paramtype = "light",
@@ -854,8 +876,8 @@ minetest.register_node("angledwalls:stoneobsidianglass", {
 	legacy_facedir_simple = true,
 	groups = {cracky=3, stone=2},
 	is_ground_content = false,
-	sounds = default.node_sound_stone_defaults(),
-	node_box = {
+	sounds = default.node_sound_glass_defaults(),
+	collision_box = {
 		type = "fixed",
 		fixed = {
 			{0.375, -0.5, 0.375, 0.5, 0.5, 0.5},
@@ -879,7 +901,8 @@ minetest.register_node("angledwalls:stoneobsidianglass", {
 
 minetest.register_node("angledwalls:woodglass", {
 	description = "angledwalls wood glass",
-	drawtype = "nodebox",
+	drawtype = "mesh",
+	mesh = "angledwalls_glass.obj",
 	tiles = {"woodglass.png"},
 	use_texture_alpha = true,
 	paramtype = "light",
@@ -887,8 +910,8 @@ minetest.register_node("angledwalls:woodglass", {
 	legacy_facedir_simple = true,
 	groups = {cracky=3, stone=2},
 	is_ground_content = false,
-	sounds = default.node_sound_stone_defaults(),
-	node_box = {
+	sounds = default.node_sound_glass_defaults(),
+	collision_box = {
 		type = "fixed",
 		fixed = {
 			{0.375, -0.5, 0.375, 0.5, 0.5, 0.5},
@@ -912,7 +935,8 @@ minetest.register_node("angledwalls:woodglass", {
 
 minetest.register_node("angledwalls:woodobsidianglass", {
 	description = "angledwalls wood obsidian glass",
-	drawtype = "nodebox",
+	drawtype = "mesh",
+	mesh = "angledwalls_glass.obj",
 	tiles = {"woodobsidianglass.png"},
 	use_texture_alpha = true,
 	paramtype = "light",
@@ -920,8 +944,8 @@ minetest.register_node("angledwalls:woodobsidianglass", {
 	legacy_facedir_simple = true,
 	groups = {cracky=3, stone=2},
 	is_ground_content = false,
-	sounds = default.node_sound_stone_defaults(),
-	node_box = {
+	sounds = default.node_sound_glass_defaults(),
+	collision_box = {
 		type = "fixed",
 		fixed = {
 			{0.375, -0.5, 0.375, 0.5, 0.5, 0.5},
