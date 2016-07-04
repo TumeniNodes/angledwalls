@@ -1,14 +1,7 @@
-<<<<<<< HEAD
 -- [MOD] Angled Walls [angledwalls] [1.1] by TumeniNodes 6-24-2016
 
-=======
->>>>>>> TumeniNodes/master
 angledwalls = {}
-dofile(minetest.get_modpath("angledwalls").."/angledwalls.lua")
-dofile(minetest.get_modpath("angledwalls").."/bakedclay.lua")
-dofile(minetest.get_modpath("angledwalls").."/quartz.lua")
 
-<<<<<<< HEAD
 function angledwalls.angled_place(itemstack, placer, pointed_thing)
 	local placer_pos = placer:getpos()
 	local pos = pointed_thing.above
@@ -114,19 +107,3 @@ end
 if minetest.get_modpath("quartz") then
 	dofile(minetest.get_modpath("angledwalls").."/quartz.lua")
 end
-=======
-
-local mod_bakedclay = minetest.get_modpath("bakedclay")
-local mod_quartz = minetest.get_modpath("quartz")
-
-
-if mod_bakedclay then
-	dofile(minetest.get_modpath("angledwalls").."/bakedclay.lua")
-	
-	end
-
-if mod_quartz then
-	dofile(minetest.get_modpath("angledwalls").."/quartz.lua")
-	
-	end
->>>>>>> TumeniNodes/master
