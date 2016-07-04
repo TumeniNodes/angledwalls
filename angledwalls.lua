@@ -1,3 +1,85 @@
+<<<<<<< HEAD
+=======
+-- [MOD] Angled Walls [angledwalls] [1.1] by TumeniNodes 6-24-2016
+
+angledwalls = {}
+
+--Register angledwalls.
+--Node will be called angledwalls:angled_wall_<subname>
+
+function angledwalls.register_angled_wall(subname, recipeitem, groups, images, description, sounds)
+	groups.angledwall = 1
+minetest.register_node(":angledwalls:angled_wall" .. subname, {
+	description = description,
+	drawtype = "mesh",
+	mesh = "angled_wall.obj",
+	tiles = images,
+	paramtype = "light",
+	sunlight_propogates = true,
+	paramtype2 = "facedir",
+	is_ground_content = false,
+	groups = groups,
+	sounds = sounds,
+	collision_box = {
+		type = "fixed",
+		fixed = {
+			{0, -0.5, 0, 0.5, 0.5, 0.5},
+			{-0.5, -0.5, -0.5, 0, 0.5, 0},
+			{-0.25, -0.5, -0.25, 0.25, 0.5, 0.25},
+			{-0.3125, -0.5, -0.1875, 0.3125, 0.5, 0.1875},
+			{-0.1875, -0.5, -0.3125, 0.1875, 0.5, 0.3125},
+			{-0.125, -0.5, -0.375, 0.125, 0.5, 0.375},
+			{-0.0625, -0.5, -0.4375, 0.0625, 0.5, 0.4375},
+			{-0.375, -0.5, -0.125, 0.375, 0.5, 0.125},
+			{-0.4375, -0.5, -0.0625, 0.4375, 0.5, 0.0625},
+		}
+	}
+})
+end
+
+-- Register angledwalls.
+-- Node will be called angledwalls:low_angled_wall_<subname>
+
+function angledwalls.register_low_angled_wall(subname, recipeitem, groups, images, description, sounds)
+	groups.lowangledwall = 1
+minetest.register_node(":angledwalls:low_angled_wall" .. subname, {
+	description = description,
+	drawtype = "mesh",
+	mesh = "low_angled_wall.obj",
+	tiles = images,
+	paramtype = "light",
+	sunlight_propogates = true,
+	paramtype2 = "facedir",
+	is_ground_content = false,
+	groups = groups,
+	sounds = sounds,
+	collision_box = {
+		type = "fixed",
+		fixed = {
+			{0, -0.5, 0, 0.5, 0, 0.5},
+			{-0.5, -0.5, -0.5, 0, 0, 0},
+			{-0.25, -0.5, -0.25, 0.25, 0, 0.25},
+			{-0.3125, -0.5, -0.1875, 0.3125, 0, 0.1875},
+			{-0.1875, -0.5, -0.3125, 0.1875, 0, 0.3125},
+			{-0.125, -0.5, -0.375, 0.125, 0, 0.375},
+			{-0.0625, -0.5, -0.4375, 0.0625, 0, 0.4375},
+			{-0.375, -0.5, -0.125, 0.375, 0, 0.125},
+			{-0.4375, -0.5, -0.0625, 0.4375, 0, 0.062},
+		}
+	}
+})
+end
+
+-- Angled wall/low wall registration function.
+-- Nodes will be called angledwalls:{angled_wall,low_angled_wall}_<subname>
+
+function angledwalls.register_angled_wall_and_low_angled_wall(subname, recipeitem, groups, images,desc_angled_wall, desc_low_angled_wall, sounds)
+	angledwalls.register_angled_wall(subname, recipeitem, groups, images, desc_angled_wall, sounds)
+	angledwalls.register_low_angled_wall(subname, recipeitem, groups, images, desc_low_angled_wall, sounds)
+end
+
+
+>>>>>>> TumeniNodes/master
 -- Register angled walls and low angled walls
 
 angledwalls.register_angled_wall_and_low_angled_wall("wood", "default:wood",
@@ -83,7 +165,11 @@ angledwalls.register_angled_wall_and_low_angled_wall("sandstone", "default:sands
 		"Sandstone Angled Wall",
 		"Sandstone Low Angled Wall",
 		default.node_sound_stone_defaults())
+<<<<<<< HEAD
 
+=======
+		
+>>>>>>> TumeniNodes/master
 angledwalls.register_angled_wall_and_low_angled_wall("sandstonebrick", "default:sandstonebrick",
 		{cracky = 2},
 		{"default_sandstone_brick.png"},
@@ -171,8 +257,12 @@ minetest.register_node("angledwalls:glass", {
 			{-0.125, -0.5, -0.125, 0, 0.5, 0},
 			{-0.0625, -0.5, -0.0625, 0.0625, 0.5, 0.0625},
 		}
+<<<<<<< HEAD
 	},
 	on_place = angledwalls.angled_place
+=======
+	}
+>>>>>>> TumeniNodes/master
 })
 
 minetest.register_node("angledwalls:obsidianglass", {
@@ -206,8 +296,12 @@ minetest.register_node("angledwalls:obsidianglass", {
 			{-0.125, -0.5, -0.125, 0, 0.5, 0},
 			{-0.0625, -0.5, -0.0625, 0.0625, 0.5, 0.0625},
 		}
+<<<<<<< HEAD
 	},
 	on_place = angledwalls.angled_place
+=======
+	}
+>>>>>>> TumeniNodes/master
 })
 
 minetest.register_node("angledwalls:obsidianglassglass", {
@@ -241,8 +335,12 @@ minetest.register_node("angledwalls:obsidianglassglass", {
 			{-0.125, -0.5, -0.125, 0, 0.5, 0},
 			{-0.0625, -0.5, -0.0625, 0.0625, 0.5, 0.0625},
 		}
+<<<<<<< HEAD
 	},
 	on_place = angledwalls.angled_place
+=======
+	}
+>>>>>>> TumeniNodes/master
 })
 
 minetest.register_node("angledwalls:obsidianbrickglass", {
@@ -276,8 +374,12 @@ minetest.register_node("angledwalls:obsidianbrickglass", {
 			{-0.125, -0.5, -0.125, 0, 0.5, 0},
 			{-0.0625, -0.5, -0.0625, 0.0625, 0.5, 0.0625},
 		}
+<<<<<<< HEAD
 	},
 	on_place = angledwalls.angled_place
+=======
+	}
+>>>>>>> TumeniNodes/master
 })
 
 minetest.register_node("angledwalls:obsidianbrickobsidianglass", {
@@ -311,8 +413,12 @@ minetest.register_node("angledwalls:obsidianbrickobsidianglass", {
 			{-0.125, -0.5, -0.125, 0, 0.5, 0},
 			{-0.0625, -0.5, -0.0625, 0.0625, 0.5, 0.0625},
 		}
+<<<<<<< HEAD
 	},
 	on_place = angledwalls.angled_place
+=======
+	}
+>>>>>>> TumeniNodes/master
 })
 
 minetest.register_node("angledwalls:acaciaglass", {
@@ -346,8 +452,12 @@ minetest.register_node("angledwalls:acaciaglass", {
 			{-0.125, -0.5, -0.125, 0, 0.5, 0},
 			{-0.0625, -0.5, -0.0625, 0.0625, 0.5, 0.0625},
 		}
+<<<<<<< HEAD
 	},
 	on_place = angledwalls.angled_place
+=======
+	}
+>>>>>>> TumeniNodes/master
 })
 
 minetest.register_node("angledwalls:acaciaobsidianglass", {
@@ -381,8 +491,12 @@ minetest.register_node("angledwalls:acaciaobsidianglass", {
 			{-0.125, -0.5, -0.125, 0, 0.5, 0},
 			{-0.0625, -0.5, -0.0625, 0.0625, 0.5, 0.0625},
 		}
+<<<<<<< HEAD
 	},
 	on_place = angledwalls.angled_place
+=======
+	}
+>>>>>>> TumeniNodes/master
 })
 
 minetest.register_node("angledwalls:aspenglass", {
@@ -416,8 +530,12 @@ minetest.register_node("angledwalls:aspenglass", {
 			{-0.125, -0.5, -0.125, 0, 0.5, 0},
 			{-0.0625, -0.5, -0.0625, 0.0625, 0.5, 0.0625},
 		}
+<<<<<<< HEAD
 	},
 	on_place = angledwalls.angled_place
+=======
+	}
+>>>>>>> TumeniNodes/master
 })
 
 minetest.register_node("angledwalls:aspenobsidianglass", {
@@ -451,8 +569,12 @@ minetest.register_node("angledwalls:aspenobsidianglass", {
 			{-0.125, -0.5, -0.125, 0, 0.5, 0},
 			{-0.0625, -0.5, -0.0625, 0.0625, 0.5, 0.0625},
 		}
+<<<<<<< HEAD
 	},
 	on_place = angledwalls.angled_place
+=======
+	}
+>>>>>>> TumeniNodes/master
 })
 
 minetest.register_node("angledwalls:brickglass", {
@@ -486,8 +608,12 @@ minetest.register_node("angledwalls:brickglass", {
 			{-0.125, -0.5, -0.125, 0, 0.5, 0},
 			{-0.0625, -0.5, -0.0625, 0.0625, 0.5, 0.0625},
 		}
+<<<<<<< HEAD
 	},
 	on_place = angledwalls.angled_place
+=======
+	}
+>>>>>>> TumeniNodes/master
 })
 
 minetest.register_node("angledwalls:brickobsidianglass", {
@@ -521,8 +647,12 @@ minetest.register_node("angledwalls:brickobsidianglass", {
 			{-0.125, -0.5, -0.125, 0, 0.5, 0},
 			{-0.0625, -0.5, -0.0625, 0.0625, 0.5, 0.0625},
 		}
+<<<<<<< HEAD
 	},
 	on_place = angledwalls.angled_place
+=======
+	}
+>>>>>>> TumeniNodes/master
 })
 
 minetest.register_node("angledwalls:bronzeglass", {
@@ -556,8 +686,12 @@ minetest.register_node("angledwalls:bronzeglass", {
 			{-0.125, -0.5, -0.125, 0, 0.5, 0},
 			{-0.0625, -0.5, -0.0625, 0.0625, 0.5, 0.0625},
 		}
+<<<<<<< HEAD
 	},
 	on_place = angledwalls.angled_place
+=======
+	}
+>>>>>>> TumeniNodes/master
 })
 
 minetest.register_node("angledwalls:bronzeobsidianglass", {
@@ -591,8 +725,12 @@ minetest.register_node("angledwalls:bronzeobsidianglass", {
 			{-0.125, -0.5, -0.125, 0, 0.5, 0},
 			{-0.0625, -0.5, -0.0625, 0.0625, 0.5, 0.0625},
 		}
+<<<<<<< HEAD
 	},
 	on_place = angledwalls.angled_place
+=======
+	}
+>>>>>>> TumeniNodes/master
 })
 
 minetest.register_node("angledwalls:clayglass", {
@@ -626,8 +764,12 @@ minetest.register_node("angledwalls:clayglass", {
 			{-0.125, -0.5, -0.125, 0, 0.5, 0},
 			{-0.0625, -0.5, -0.0625, 0.0625, 0.5, 0.0625},
 		}
+<<<<<<< HEAD
 	},
 	on_place = angledwalls.angled_place
+=======
+	}
+>>>>>>> TumeniNodes/master
 })
 
 minetest.register_node("angledwalls:clayobsidianglass", {
@@ -661,8 +803,12 @@ minetest.register_node("angledwalls:clayobsidianglass", {
 			{-0.125, -0.5, -0.125, 0, 0.5, 0},
 			{-0.0625, -0.5, -0.0625, 0.0625, 0.5, 0.0625},
 		}
+<<<<<<< HEAD
 	},
 	on_place = angledwalls.angled_place
+=======
+	}
+>>>>>>> TumeniNodes/master
 })
 
 minetest.register_node("angledwalls:coalglass", {
@@ -696,8 +842,12 @@ minetest.register_node("angledwalls:coalglass", {
 			{-0.125, -0.5, -0.125, 0, 0.5, 0},
 			{-0.0625, -0.5, -0.0625, 0.0625, 0.5, 0.0625},
 		}
+<<<<<<< HEAD
 	},
 	on_place = angledwalls.angled_place
+=======
+	}
+>>>>>>> TumeniNodes/master
 })
 
 minetest.register_node("angledwalls:coalobsidianglass", {
@@ -731,8 +881,12 @@ minetest.register_node("angledwalls:coalobsidianglass", {
 			{-0.125, -0.5, -0.125, 0, 0.5, 0},
 			{-0.0625, -0.5, -0.0625, 0.0625, 0.5, 0.0625},
 		}
+<<<<<<< HEAD
 	},
 	on_place = angledwalls.angled_place
+=======
+	}
+>>>>>>> TumeniNodes/master
 })
 
 minetest.register_node("angledwalls:cobbleglass", {
@@ -766,8 +920,12 @@ minetest.register_node("angledwalls:cobbleglass", {
 			{-0.125, -0.5, -0.125, 0, 0.5, 0},
 			{-0.0625, -0.5, -0.0625, 0.0625, 0.5, 0.0625},
 		}
+<<<<<<< HEAD
 	},
 	on_place = angledwalls.angled_place
+=======
+	}
+>>>>>>> TumeniNodes/master
 })
 
 minetest.register_node("angledwalls:cobbleobsidianglass", {
@@ -801,8 +959,12 @@ minetest.register_node("angledwalls:cobbleobsidianglass", {
 			{-0.125, -0.5, -0.125, 0, 0.5, 0},
 			{-0.0625, -0.5, -0.0625, 0.0625, 0.5, 0.0625},
 		}
+<<<<<<< HEAD
 	},
 	on_place = angledwalls.angled_place
+=======
+	}
+>>>>>>> TumeniNodes/master
 })
 
 minetest.register_node("angledwalls:copperglass", {
@@ -836,8 +998,12 @@ minetest.register_node("angledwalls:copperglass", {
 			{-0.125, -0.5, -0.125, 0, 0.5, 0},
 			{-0.0625, -0.5, -0.0625, 0.0625, 0.5, 0.0625},
 		}
+<<<<<<< HEAD
 	},
 	on_place = angledwalls.angled_place
+=======
+	}
+>>>>>>> TumeniNodes/master
 })
 
 minetest.register_node("angledwalls:copperpbsidianglass", {
@@ -871,8 +1037,12 @@ minetest.register_node("angledwalls:copperpbsidianglass", {
 			{-0.125, -0.5, -0.125, 0, 0.5, 0},
 			{-0.0625, -0.5, -0.0625, 0.0625, 0.5, 0.0625},
 		}
+<<<<<<< HEAD
 	},
 	on_place = angledwalls.angled_place
+=======
+	}
+>>>>>>> TumeniNodes/master
 })
 
 minetest.register_node("angledwalls:desertbrickglass", {
@@ -906,8 +1076,12 @@ minetest.register_node("angledwalls:desertbrickglass", {
 			{-0.125, -0.5, -0.125, 0, 0.5, 0},
 			{-0.0625, -0.5, -0.0625, 0.0625, 0.5, 0.0625},
 		}
+<<<<<<< HEAD
 	},
 	on_place = angledwalls.angled_place
+=======
+	}
+>>>>>>> TumeniNodes/master
 })
 
 minetest.register_node("angledwalls:desertbrickobsidianglass", {
@@ -941,8 +1115,12 @@ minetest.register_node("angledwalls:desertbrickobsidianglass", {
 			{-0.125, -0.5, -0.125, 0, 0.5, 0},
 			{-0.0625, -0.5, -0.0625, 0.0625, 0.5, 0.0625},
 		}
+<<<<<<< HEAD
 	},
 	on_place = angledwalls.angled_place
+=======
+	}
+>>>>>>> TumeniNodes/master
 })
 
 minetest.register_node("angledwalls:desertcobbleglass", {
@@ -976,8 +1154,12 @@ minetest.register_node("angledwalls:desertcobbleglass", {
 			{-0.125, -0.5, -0.125, 0, 0.5, 0},
 			{-0.0625, -0.5, -0.0625, 0.0625, 0.5, 0.0625},
 		}
+<<<<<<< HEAD
 	},
 	on_place = angledwalls.angled_place
+=======
+	}
+>>>>>>> TumeniNodes/master
 })
 
 minetest.register_node("angledwalls:desertcobbleobsidianglass", {
@@ -1011,8 +1193,12 @@ minetest.register_node("angledwalls:desertcobbleobsidianglass", {
 			{-0.125, -0.5, -0.125, 0, 0.5, 0},
 			{-0.0625, -0.5, -0.0625, 0.0625, 0.5, 0.0625},
 		}
+<<<<<<< HEAD
 	},
 	on_place = angledwalls.angled_place
+=======
+	}
+>>>>>>> TumeniNodes/master
 })
 
 minetest.register_node("angledwalls:desertstoneglass", {
@@ -1046,8 +1232,12 @@ minetest.register_node("angledwalls:desertstoneglass", {
 			{-0.125, -0.5, -0.125, 0, 0.5, 0},
 			{-0.0625, -0.5, -0.0625, 0.0625, 0.5, 0.0625},
 		}
+<<<<<<< HEAD
 	},
 	on_place = angledwalls.angled_place
+=======
+	}
+>>>>>>> TumeniNodes/master
 })
 
 minetest.register_node("angledwalls:desertstoneobsidianglass", {
@@ -1081,8 +1271,12 @@ minetest.register_node("angledwalls:desertstoneobsidianglass", {
 			{-0.125, -0.5, -0.125, 0, 0.5, 0},
 			{-0.0625, -0.5, -0.0625, 0.0625, 0.5, 0.0625},
 		}
+<<<<<<< HEAD
 	},
 	on_place = angledwalls.angled_place
+=======
+	}
+>>>>>>> TumeniNodes/master
 })
 
 minetest.register_node("angledwalls:diamondglass", {
@@ -1116,8 +1310,12 @@ minetest.register_node("angledwalls:diamondglass", {
 			{-0.125, -0.5, -0.125, 0, 0.5, 0},
 			{-0.0625, -0.5, -0.0625, 0.0625, 0.5, 0.0625},
 		}
+<<<<<<< HEAD
 	},
 	on_place = angledwalls.angled_place
+=======
+	}
+>>>>>>> TumeniNodes/master
 })
 
 minetest.register_node("angledwalls:diamondobsidianglass", {
@@ -1151,8 +1349,12 @@ minetest.register_node("angledwalls:diamondobsidianglass", {
 			{-0.125, -0.5, -0.125, 0, 0.5, 0},
 			{-0.0625, -0.5, -0.0625, 0.0625, 0.5, 0.0625},
 		}
+<<<<<<< HEAD
 	},
 	on_place = angledwalls.angled_place
+=======
+	}
+>>>>>>> TumeniNodes/master
 })
 
 minetest.register_node("angledwalls:goldglass", {
@@ -1186,8 +1388,12 @@ minetest.register_node("angledwalls:goldglass", {
 			{-0.125, -0.5, -0.125, 0, 0.5, 0},
 			{-0.0625, -0.5, -0.0625, 0.0625, 0.5, 0.0625},
 		}
+<<<<<<< HEAD
 	},
 	on_place = angledwalls.angled_place
+=======
+	}
+>>>>>>> TumeniNodes/master
 })
 
 minetest.register_node("angledwalls:goldobsidianglass", {
@@ -1221,8 +1427,12 @@ minetest.register_node("angledwalls:goldobsidianglass", {
 			{-0.125, -0.5, -0.125, 0, 0.5, 0},
 			{-0.0625, -0.5, -0.0625, 0.0625, 0.5, 0.0625},
 		}
+<<<<<<< HEAD
 	},
 	on_place = angledwalls.angled_place
+=======
+	}
+>>>>>>> TumeniNodes/master
 })
 
 minetest.register_node("angledwalls:iceglass", {
@@ -1256,8 +1466,12 @@ minetest.register_node("angledwalls:iceglass", {
 			{-0.125, -0.5, -0.125, 0, 0.5, 0},
 			{-0.0625, -0.5, -0.0625, 0.0625, 0.5, 0.0625},
 		}
+<<<<<<< HEAD
 	},
 	on_place = angledwalls.angled_place
+=======
+	}
+>>>>>>> TumeniNodes/master
 })
 
 minetest.register_node("angledwalls:iceobsidianglass", {
@@ -1291,8 +1505,12 @@ minetest.register_node("angledwalls:iceobsidianglass", {
 			{-0.125, -0.5, -0.125, 0, 0.5, 0},
 			{-0.0625, -0.5, -0.0625, 0.0625, 0.5, 0.0625},
 		}
+<<<<<<< HEAD
 	},
 	on_place = angledwalls.angled_place
+=======
+	}
+>>>>>>> TumeniNodes/master
 })
 
 minetest.register_node("angledwalls:junglewoodglass", {
@@ -1326,8 +1544,12 @@ minetest.register_node("angledwalls:junglewoodglass", {
 			{-0.125, -0.5, -0.125, 0, 0.5, 0},
 			{-0.0625, -0.5, -0.0625, 0.0625, 0.5, 0.0625},
 		}
+<<<<<<< HEAD
 	},
 	on_place = angledwalls.angled_place
+=======
+	}
+>>>>>>> TumeniNodes/master
 })
 
 minetest.register_node("angledwalls:junglewoodobsidianglass", {
@@ -1361,8 +1583,12 @@ minetest.register_node("angledwalls:junglewoodobsidianglass", {
 			{-0.125, -0.5, -0.125, 0, 0.5, 0},
 			{-0.0625, -0.5, -0.0625, 0.0625, 0.5, 0.0625},
 		}
+<<<<<<< HEAD
 	},
 	on_place = angledwalls.angled_place
+=======
+	}
+>>>>>>> TumeniNodes/master
 })
 
 minetest.register_node("angledwalls:meseglass", {
@@ -1396,8 +1622,12 @@ minetest.register_node("angledwalls:meseglass", {
 			{-0.125, -0.5, -0.125, 0, 0.5, 0},
 			{-0.0625, -0.5, -0.0625, 0.0625, 0.5, 0.0625},
 		}
+<<<<<<< HEAD
 	},
 	on_place = angledwalls.angled_place
+=======
+	}
+>>>>>>> TumeniNodes/master
 })
 
 minetest.register_node("angledwalls:meseobsidianglass", {
@@ -1431,8 +1661,12 @@ minetest.register_node("angledwalls:meseobsidianglass", {
 			{-0.125, -0.5, -0.125, 0, 0.5, 0},
 			{-0.0625, -0.5, -0.0625, 0.0625, 0.5, 0.0625},
 		}
+<<<<<<< HEAD
 	},
 	on_place = angledwalls.angled_place
+=======
+	}
+>>>>>>> TumeniNodes/master
 })
 
 minetest.register_node("angledwalls:mossycobbleglass", {
@@ -1466,8 +1700,12 @@ minetest.register_node("angledwalls:mossycobbleglass", {
 			{-0.125, -0.5, -0.125, 0, 0.5, 0},
 			{-0.0625, -0.5, -0.0625, 0.0625, 0.5, 0.0625},
 		}
+<<<<<<< HEAD
 	},
 	on_place = angledwalls.angled_place
+=======
+	}
+>>>>>>> TumeniNodes/master
 })
 
 minetest.register_node("angledwalls:mossycobbleobsidianglass", {
@@ -1501,8 +1739,12 @@ minetest.register_node("angledwalls:mossycobbleobsidianglass", {
 			{-0.125, -0.5, -0.125, 0, 0.5, 0},
 			{-0.0625, -0.5, -0.0625, 0.0625, 0.5, 0.0625},
 		}
+<<<<<<< HEAD
 	},
 	on_place = angledwalls.angled_place
+=======
+	}
+>>>>>>> TumeniNodes/master
 })
 
 minetest.register_node("angledwalls:pinewoodglass", {
@@ -1536,8 +1778,12 @@ minetest.register_node("angledwalls:pinewoodglass", {
 			{-0.125, -0.5, -0.125, 0, 0.5, 0},
 			{-0.0625, -0.5, -0.0625, 0.0625, 0.5, 0.0625},
 		}
+<<<<<<< HEAD
 	},
 	on_place = angledwalls.angled_place
+=======
+	}
+>>>>>>> TumeniNodes/master
 })
 
 minetest.register_node("angledwalls:pinewoodobsidianglass", {
@@ -1571,8 +1817,12 @@ minetest.register_node("angledwalls:pinewoodobsidianglass", {
 			{-0.125, -0.5, -0.125, 0, 0.5, 0},
 			{-0.0625, -0.5, -0.0625, 0.0625, 0.5, 0.0625},
 		}
+<<<<<<< HEAD
 	},
 	on_place = angledwalls.angled_place
+=======
+	}
+>>>>>>> TumeniNodes/master
 })
 
 minetest.register_node("angledwalls:sandstonebrickglass", {
@@ -1606,8 +1856,12 @@ minetest.register_node("angledwalls:sandstonebrickglass", {
 			{-0.125, -0.5, -0.125, 0, 0.5, 0},
 			{-0.0625, -0.5, -0.0625, 0.0625, 0.5, 0.0625},
 		}
+<<<<<<< HEAD
 	},
 	on_place = angledwalls.angled_place
+=======
+	}
+>>>>>>> TumeniNodes/master
 })
 
 minetest.register_node("angledwalls:sandstonebrickobsidianglass", {
@@ -1641,8 +1895,12 @@ minetest.register_node("angledwalls:sandstonebrickobsidianglass", {
 			{-0.125, -0.5, -0.125, 0, 0.5, 0},
 			{-0.0625, -0.5, -0.0625, 0.0625, 0.5, 0.0625},
 		}
+<<<<<<< HEAD
 	},
 	on_place = angledwalls.angled_place
+=======
+	}
+>>>>>>> TumeniNodes/master
 })
 
 minetest.register_node("angledwalls:sandstoneglass", {
@@ -1676,8 +1934,12 @@ minetest.register_node("angledwalls:sandstoneglass", {
 			{-0.125, -0.5, -0.125, 0, 0.5, 0},
 			{-0.0625, -0.5, -0.0625, 0.0625, 0.5, 0.0625},
 		}
+<<<<<<< HEAD
 	},
 	on_place = angledwalls.angled_place
+=======
+	}
+>>>>>>> TumeniNodes/master
 })
 
 minetest.register_node("angledwalls:sandstoneobsidianglass", {
@@ -1711,8 +1973,12 @@ minetest.register_node("angledwalls:sandstoneobsidianglass", {
 			{-0.125, -0.5, -0.125, 0, 0.5, 0},
 			{-0.0625, -0.5, -0.0625, 0.0625, 0.5, 0.0625},
 		}
+<<<<<<< HEAD
 	},
 	on_place = angledwalls.angled_place
+=======
+	}
+>>>>>>> TumeniNodes/master
 })
 
 minetest.register_node("angledwalls:snowglass", {
@@ -1746,8 +2012,12 @@ minetest.register_node("angledwalls:snowglass", {
 			{-0.125, -0.5, -0.125, 0, 0.5, 0},
 			{-0.0625, -0.5, -0.0625, 0.0625, 0.5, 0.0625},
 		}
+<<<<<<< HEAD
 	},
 	on_place = angledwalls.angled_place
+=======
+	}
+>>>>>>> TumeniNodes/master
 })
 
 minetest.register_node("angledwalls:snowobsidianglass", {
@@ -1781,8 +2051,12 @@ minetest.register_node("angledwalls:snowobsidianglass", {
 			{-0.125, -0.5, -0.125, 0, 0.5, 0},
 			{-0.0625, -0.5, -0.0625, 0.0625, 0.5, 0.0625},
 		}
+<<<<<<< HEAD
 	},
 	on_place = angledwalls.angled_place
+=======
+	}
+>>>>>>> TumeniNodes/master
 })
 
 minetest.register_node("angledwalls:steelglass", {
@@ -1816,8 +2090,12 @@ minetest.register_node("angledwalls:steelglass", {
 			{-0.125, -0.5, -0.125, 0, 0.5, 0},
 			{-0.0625, -0.5, -0.0625, 0.0625, 0.5, 0.0625},
 		}
+<<<<<<< HEAD
 	},
 	on_place = angledwalls.angled_place
+=======
+	}
+>>>>>>> TumeniNodes/master
 })
 
 minetest.register_node("angledwalls:steelobsidianglass", {
@@ -1851,8 +2129,12 @@ minetest.register_node("angledwalls:steelobsidianglass", {
 			{-0.125, -0.5, -0.125, 0, 0.5, 0},
 			{-0.0625, -0.5, -0.0625, 0.0625, 0.5, 0.0625},
 		}
+<<<<<<< HEAD
 	},
 	on_place = angledwalls.angled_place
+=======
+	}
+>>>>>>> TumeniNodes/master
 })
 
 minetest.register_node("angledwalls:stonebrickglass", {
@@ -1886,8 +2168,12 @@ minetest.register_node("angledwalls:stonebrickglass", {
 			{-0.125, -0.5, -0.125, 0, 0.5, 0},
 			{-0.0625, -0.5, -0.0625, 0.0625, 0.5, 0.0625},
 		}
+<<<<<<< HEAD
 	},
 	on_place = angledwalls.angled_place
+=======
+	}
+>>>>>>> TumeniNodes/master
 })
 
 minetest.register_node("angledwalls:stonebrickobsidianglass", {
@@ -1921,8 +2207,12 @@ minetest.register_node("angledwalls:stonebrickobsidianglass", {
 			{-0.125, -0.5, -0.125, 0, 0.5, 0},
 			{-0.0625, -0.5, -0.0625, 0.0625, 0.5, 0.0625},
 		}
+<<<<<<< HEAD
 	},
 	on_place = angledwalls.angled_place
+=======
+	}
+>>>>>>> TumeniNodes/master
 })
 
 minetest.register_node("angledwalls:stoneglass", {
@@ -1956,8 +2246,12 @@ minetest.register_node("angledwalls:stoneglass", {
 			{-0.125, -0.5, -0.125, 0, 0.5, 0},
 			{-0.0625, -0.5, -0.0625, 0.0625, 0.5, 0.0625},
 		}
+<<<<<<< HEAD
 	},
 	on_place = angledwalls.angled_place
+=======
+	}
+>>>>>>> TumeniNodes/master
 })
 
 minetest.register_node("angledwalls:stoneobsidianglass", {
@@ -1991,8 +2285,12 @@ minetest.register_node("angledwalls:stoneobsidianglass", {
 			{-0.125, -0.5, -0.125, 0, 0.5, 0},
 			{-0.0625, -0.5, -0.0625, 0.0625, 0.5, 0.0625},
 		}
+<<<<<<< HEAD
 	},
 	on_place = angledwalls.angled_place
+=======
+	}
+>>>>>>> TumeniNodes/master
 })
 
 minetest.register_node("angledwalls:woodglass", {
@@ -2026,8 +2324,12 @@ minetest.register_node("angledwalls:woodglass", {
 			{-0.125, -0.5, -0.125, 0, 0.5, 0},
 			{-0.0625, -0.5, -0.0625, 0.0625, 0.5, 0.0625},
 		}
+<<<<<<< HEAD
 	},
 	on_place = angledwalls.angled_place
+=======
+	}
+>>>>>>> TumeniNodes/master
 })
 
 minetest.register_node("angledwalls:woodobsidianglass", {
@@ -2061,6 +2363,13 @@ minetest.register_node("angledwalls:woodobsidianglass", {
 			{-0.125, -0.5, -0.125, 0, 0.5, 0},
 			{-0.0625, -0.5, -0.0625, 0.0625, 0.5, 0.0625},
 		}
+<<<<<<< HEAD
 	},
 	on_place = angledwalls.angled_place
 })
+=======
+	}
+})
+
+
+>>>>>>> TumeniNodes/master
