@@ -1,4 +1,4 @@
--- [MOD] Angled Walls [angledwalls] [1.1] by TumeniNodes 6-24-2016
+-- [MOD] Angled Walls [angledwalls] [1.2] by TumeniNodes 6-24-2016
 
 angledwalls = {}
 
