@@ -1,6 +1,7 @@
--- [MOD] Angled Walls [angledwalls] [1.2] by TumeniNodes 6-24-2016
+-- [MOD] Angled Walls [angledwalls] [1.3] by TumeniNodes 6-24-2016
 
 dofile(minetest.get_modpath("angledwalls").."/angledwalls.lua")
+dofile(minetest.get_modpath("angledwalls").."/angledglass.lua")
 
 if minetest.get_modpath("bakedclay") then
 	dofile(minetest.get_modpath("angledwalls").."/bakedclay.lua")

@@ -1,1 +1,3 @@
-Adds Angled walls, and windows for Minetest
+Angled Walls 1.3 by TumeniNodes 06/24/2016
+
+Angled Walls, and Angled Glass for Minetest

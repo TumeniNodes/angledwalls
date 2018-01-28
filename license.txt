@@ -1,8 +1,3 @@
-*Code: unlicense
-
-*Models: unlicense (models provided by pithydon)
-
-*Textures from Minetest Game mod: default
 =========================================
 
 License of source code:
