@@ -30,9 +30,8 @@ end
 
 function angledwalls.register_angled_wall(subname, recipeitem, description, def)
 	def = table.copy(def)
-	def.groups.angledwall = 1
 	
-	
+	def.groups.angledwall = 1	
 	def.description = description
 	def.drawtype = "mesh"
 	def.mesh = "angled_wall.obj"
@@ -55,6 +54,7 @@ function angledwalls.register_angled_wall(subname, recipeitem, description, def)
 		}
 	}
 	def.on_place = angledwalls.angled_place
+	
 	minetest.register_node(":angledwalls:angled_wall" .. subname, def)
 end
 
@@ -63,8 +63,8 @@ end
 
 function angledwalls.register_low_angled_wall(subname, recipeitem, description, def)
 	def = table.copy(def)
-	def.groups.lowangledwall = 1
 	
+	def.groups.lowangledwall = 1
 	def.description = description
 	def.drawtype = "mesh"
 	def.mesh = "low_angled_wall.obj"
@@ -92,12 +92,6 @@ function angledwalls.register_low_angled_wall(subname, recipeitem, description, 
 		}
 	def.on_place = angledwalls.angled_place
 	
-	
-	
-	
-	
-	
-	
 	minetest.register_node(":angledwalls:low_angled_wall" .. subname, def)
 end
 
@@ -106,8 +100,8 @@ end
 
 function angledwalls.register_corner(subname, recipeitem, description, def)
 	def = table.copy(def)
-	def.groups.corner = 1
 	
+	def.groups.corner = 1	
 	def.description = description
 	def.drawtype = "mesh"
 	def.mesh = "angledwalls_corner.obj"
@@ -235,7 +229,6 @@ angledwalls.register_angled_wall_and_low_angled_wall_and_corner(
 		sounds = default.node_sound_stone_defaults(),
 	}
 )
-
 
 angledwalls.register_angled_wall_and_low_angled_wall_and_corner(
 	"clay", 
