@@ -1,3 +1,3 @@
-Angled Walls 1.3 by TumeniNodes 06/24/2016
+Angled Walls 1.4 by TumeniNodes (C) 2016-2018 06/24/2016
 
-Angled Walls, and Angled Glass for Minetest
+Angled Walls, Angled Glass, and Angled Doors for Minetest

@@ -2,6 +2,7 @@
 
 dofile(minetest.get_modpath("angledwalls").."/angledwalls.lua")
 dofile(minetest.get_modpath("angledwalls").."/angledglass.lua")
+dofile(minetest.get_modpath("angledwalls").."/adoors.lua")
 
 if minetest.get_modpath("bakedclay") then
 	dofile(minetest.get_modpath("angledwalls").."/bakedclay.lua")
