@@ -41,6 +41,11 @@ Copyright (C) 2016-2018 TumeniNodes
 CC BY SA 4.0 International
 
 *angled_glass.obj / .blend
+*adoors_Ldoor.obj / .blend
+*adoors_Ldoor_open.obj / .blend
+*adoors_Rdoor.obj / .blend
+*adoors_Rdoor_open.obj / .blend
+*sloped_wall.obj / .blend
 
 -----------------------
 
