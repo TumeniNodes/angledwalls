@@ -14,7 +14,6 @@ minetest.register_node(":slopedwalls:sloped_wall" .. subname, {
 	tiles = images,
 	paramtype = "light",
 	paramtype2 = "facedir",
-	facedir = simple,
 	groups = groups,
 	sounds = sounds,
 	collision_box = {
